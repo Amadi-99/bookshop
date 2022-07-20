@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {mobile} from "../responsive";
 
+
+
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -9,7 +11,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://img.freepik.com/free-photo/stylish-girl-reading-book_23-2147666421.jpg?w=2000")
+    url("https://cdni.iconscout.com/illustration/premium/thumb/online-payment-successful-5455293-4568734.png")
       center;
   background-size: cover;
   display: flex;
@@ -22,11 +24,6 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: white;
   ${mobile({ width: "75%" })}
-`;
-
-const Title = styled.h1`
-  font-size: 24px;
-  font-weight: 300;
 `;
 
 const Form = styled.form`
@@ -58,22 +55,28 @@ const Links = styled.a`
   cursor: pointer;
 `;
 
-const Login = () => {
+const Title = styled.h1`
+  font-weight: 200;
+`;
+
+const Desc = styled.p`
+  margin: 20px 0px;
+`;
+
+const Success = () => {
   return (
     <Container>
       
       <Wrapper>
       
-        <Title>SIGN IN</Title>
+        <Title></Title>
         <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
-          <Link to={`/home`}>
-          <Button>LOGIN</Button>
-          </Link>
-          <Links>DO NOT YOU REMEMBER THE PASSWORD?</Links>
-          <Link to={`/register`}>
-          <Links>CREATE A NEW ACCOUNT</Links>
+          <Title>Thank You !</Title>
+          <Desc>
+          Your Order has been received
+          </Desc>
+        <Link to={`/home`}>
+        <Button>Exit</Button>
           </Link>
         </Form>
       
@@ -83,4 +86,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default  Success;
